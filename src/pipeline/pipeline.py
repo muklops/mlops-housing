@@ -36,13 +36,6 @@ def run_pipeline() -> None:
         logger.info("Stage: Data Transformation")
         train_path, test_path = DataTransformation(cfg["data"]).split(raw_data_path)
 
-        # -------------------- Evidently Drift Report -------------
-        logger.info("Stage: Data & Model Drift Analysis (Evidently)")
-        DriftReport(cfg["metrics"]).generate(
-            train_path=train_path,
-            test_path=test_path
-        )
-
         # -------------------- Model Training --------------------
         logger.info("Stage: Model Training")
         model_path = ModelTrainer(
@@ -50,6 +43,13 @@ def run_pipeline() -> None:
             data_cfg=cfg["data"],
             mlflow_cfg=cfg["mlflow"]
         ).train(train_path)
+
+        # -------------------- Evidently Drift Report -------------
+        logger.info("Stage: Data Drift Analysis (Evidently)")
+        DriftReport(cfg["metrics"]).generate(
+            train_path=train_path,
+            test_path=test_path
+        )
 
         # -------------------- Model Evaluation ------------------
         logger.info("Stage: Model Evaluation")
@@ -62,7 +62,7 @@ def run_pipeline() -> None:
             test_path=test_path
         )
 
-         #-------------------- Model Promotion -------------------
+        # -------------------- Model Promotion -------------------
         if metrics.get("promote", False):
             logger.info("New model approved for promotion")
             ModelPusher(cfg["s3"]).push(model_path)

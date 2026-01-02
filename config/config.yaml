@@ -14,14 +14,14 @@ model:
       fit_intercept: true
 
     RandomForest:
-      n_estimators: 223
-      max_depth: 10
+      n_estimators: 251
+      max_depth: 11
       random_state: 42
 
     GradientBoosting:
-      n_estimators: 150
-      learning_rate: 0.1
-      max_depth: 4
+      n_estimators: 181
+      learning_rate: 0.05
+      max_depth: 3
       random_state: 42
 
 metrics:

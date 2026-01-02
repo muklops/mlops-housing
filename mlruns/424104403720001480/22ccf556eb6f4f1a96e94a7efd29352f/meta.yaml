@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/424104403720001480/22ccf556eb6f4f1a96e94a7efd29352f/artifacts
+end_time: 1767335611991
+entry_point_name: ''
+experiment_id: '424104403720001480'
+lifecycle_stage: active
+run_id: 22ccf556eb6f4f1a96e94a7efd29352f
+run_name: GradientBoosting
+run_uuid: 22ccf556eb6f4f1a96e94a7efd29352f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767335605431
+status: 3
+tags: []
+user_id: mukesk2
