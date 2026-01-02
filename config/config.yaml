@@ -33,5 +33,5 @@ mlflow:
   experiment_name: housing-price
 
 s3:
-  bucket: mlops-housing-model
+  bucket: housingmk
   model_key: model/model.pkl
