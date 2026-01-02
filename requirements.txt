@@ -1,0 +1,16 @@
+numpy
+pandas
+scikit-learn
+PyYAML==6.0.1
+
+mlflow==2.13.0
+
+dvc[s3]==3.51.2
+ruamel.yaml==0.17.21
+
+evidently==0.4.21
+
+boto3
+flask
+cloudpickle
+joblib
