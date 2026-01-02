@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/424104403720001480/e25fb25f57dc4a1ea7967771421de9fa/artifacts
+end_time: 1767344202655
+entry_point_name: ''
+experiment_id: '424104403720001480'
+lifecycle_stage: active
+run_id: e25fb25f57dc4a1ea7967771421de9fa
+run_name: RandomForest
+run_uuid: e25fb25f57dc4a1ea7967771421de9fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767344139496
+status: 3
+tags: []
+user_id: mukesk2
